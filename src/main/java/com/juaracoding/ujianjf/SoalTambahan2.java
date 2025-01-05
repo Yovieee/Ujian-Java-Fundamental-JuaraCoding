@@ -4,19 +4,24 @@ import java.util.Scanner;
 
 public class SoalTambahan2 {
     public static void main(String[] args) {
+        // Inisialisasi variabel
         Scanner input = new Scanner(System.in);
-        System.out.print("MASUKKAN NAMA: ");
-        String nama = input.nextLine();
         String divisi = "";
         String level = "";
-        System.out.print("MASUKKAN NILAI KANDIDAT (0-10): ");
-        int myValueSQA = input.nextInt();
         int salary = 0;
-
+        String nama = "";
         int standardCompanyQA = 6;
         int standardSeniorAutomation = 8;
         int standardSeniorManual = standardCompanyQA;
+        int myValueSQA = 0;
 
+        // Menerima inputan user
+        System.out.print("MASUKKAN NAMA: ");
+        nama = input.nextLine();
+        System.out.print("MASUKKAN NILAI KANDIDAT (0-10): ");
+        myValueSQA = input.nextInt();
+
+        // Menetapkan divisi, level dan gaji
         if (myValueSQA > standardCompanyQA) {
             divisi = "QA Automation";
             if (myValueSQA > standardSeniorAutomation) {
@@ -37,6 +42,7 @@ public class SoalTambahan2 {
             }
         }
 
+        // Menampilkan hasil
         System.out.println("Nama :" + nama);
         System.out.println("Divisi :" + divisi);
         System.out.println("Level :" + level);
